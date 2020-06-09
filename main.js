@@ -12,6 +12,31 @@ $(document).ready(function () {
     }
   )
 
+  $('.nav i').click(
+    function() {
+      var immagineCorrente = $('.images img.active');
+      var dotBlue = $('.nav i.active');
+
+      if (!($(this).hasClass('active'))) {
+        immagineCorrente.removeClass('active');
+        dotBlue.removeClass('active');
+        $(this).addClass('active');
+        if ($(this).hasClass('first')) {
+          $('.images img.first').addClass('active');
+        }
+        else if ($(this).hasClass('second')) {
+          $('.images img.second').addClass('active');
+        }
+        else if ($(this).hasClass('third')) {
+          $('.images img.third').addClass('active');
+        }
+        else {
+          $('.images img.last').addClass('active');
+        }
+      }
+    }
+  )
+
 })
 
 // devo creare una funzione che permetta al carousel di visualizzare l immagine successiva quando clicco la freccia destra
@@ -49,3 +74,14 @@ function muoviIndietro() {
     dotBlue.prev('i').addClass('active');
   }
 }
+
+// devo creare una funzione che quando clicco su un pallino l immagine corrispondente venga visualizzata
+// function cliccaPallino() {
+//   var immagineCorrente = $('.images img.active');
+//   var dotBlue = $('.nav i.active');
+//
+//   if (!($(this).hasClass('active'))) {
+//     immagineCorrente.removeClass('active');
+//     dotBlue.removeClass('active');
+//   }
+// }
