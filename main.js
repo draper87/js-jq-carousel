@@ -74,14 +74,3 @@ function muoviIndietro() {
     dotBlue.prev('i').addClass('active');
   }
 }
-
-// devo creare una funzione che quando clicco su un pallino l immagine corrispondente venga visualizzata
-// function cliccaPallino() {
-//   var immagineCorrente = $('.images img.active');
-//   var dotBlue = $('.nav i.active');
-//
-//   if (!($(this).hasClass('active'))) {
-//     immagineCorrente.removeClass('active');
-//     dotBlue.removeClass('active');
-//   }
-// }
